@@ -1,36 +1,17 @@
-#include "main.h"
-#include "6-abs.c"
 #include <stdio.h>
 /**
- * print_to_98 - prints to 98
- * @n: integer to start at
- *
- */
-
-void print_to_98(int n)
+*main - prints count of multiples
+*of 3 or 5 below 1024
+*Return: return 0
+*/
+int main(void)
 {
-	int i;
-
-	if (n > 98)
-	{
-		for (i = n; i >= 98; i--)
-		{
-			printf("%d", i);
-			if (i != 98)
-			{
-				printf(", ");
-			}
-		}
-	} else
-	{
-		for (i = n; i <= 98; i++)
-		{
-			printf("%d", i);
-			if (i != 98)
-			{
-				printf(", ");
-			}
-		}
-	}
-	printf("\n");
+int n, sum = 0;
+for (n = 0; n < 1024; n++)
+{
+if ((n % 3) == 0 || (n % 5) == 0)
+sum += n;
+}
+printf("%d\n", sum);
+return (0);
 }
