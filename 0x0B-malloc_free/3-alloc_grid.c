@@ -7,6 +7,7 @@
  *
  * Return: pointer..
  */
+
 int **alloc_grid(int width, int height)
 {
 int **s, r, c;
